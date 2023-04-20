@@ -1,0 +1,5 @@
+D:\Data Engineering\Spark-essentials-RockTheJVM\spark-cluster>docker-compose up --scale spark-worker=3
+
+D:\Data Engineering\Spark-essentials-RockTheJVM>docker exec -it spark-cluster-spark-master-1 bash
+
+root@7768659dce94:/spark# ./bin/spark-submit --class part6practical.TestDeployApp --deploy-mode client --master spark://7768659dce94:7077 --verbose --supervise /opt/spark-apps/Spark-essentials-RockTheJVM.jar /opt/spark-data/movies.json /opt/spark-data/goodComedies
